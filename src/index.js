@@ -4,6 +4,7 @@ import SearchBar from './SearchBar.js'
 import axios from 'axios'
 import Video from './VideoList'
 import VideoDetail from './VideoDetail'
+import Message from './Message'
 
 
 class App extends React.Component{
@@ -64,6 +65,8 @@ this.setState({selectedVideoDescription:video.snippet.description})
 
             <SearchBar submit={this.onSubmitForm}/>
 
+            <Message found={this.state.found}/>
+
 
             <div style={{height:'30px'}}></div>
 
@@ -78,7 +81,7 @@ this.setState({selectedVideoDescription:video.snippet.description})
 
               <div className="col s12 m4 l3"> 
                   <Video videoSubmit={this.onVideoClick} video={this.state.video}
-                              found={this.state.found}/>
+                              />
               </div>
 
             </div>

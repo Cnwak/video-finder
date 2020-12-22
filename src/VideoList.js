@@ -21,7 +21,7 @@ class VideoList extends React.Component{
 
     return(
       <div>
-      <div><h4>{this.props.found}</h4></div>
+      
       
 
       <div>{vCard}</div>
